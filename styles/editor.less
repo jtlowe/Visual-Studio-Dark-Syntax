@@ -1,0 +1,101 @@
+// Config -----------------------------------
+@old-syntax-hue:          220;
+@old-syntax-saturation:   13%;
+@old-syntax-brightness:   18%;
+
+// Base colors -----------------------------------
+@old-syntax-accent: hsl(@old-syntax-hue, 100%, 66% );
+@old-syntax-guide:  fade(@old-syntax-fg, 15%);
+@old-syntax-fg:     @old-mono-1;
+@old-syntax-bg:     hsl(@old-syntax-hue, @old-syntax-saturation, @old-syntax-brightness);
+
+@old-mono-1: hsl(@syntax-hue, 14%, 71%); // default text
+@old-mono-2: hsl(@syntax-hue,  9%, 55%);
+@old-mono-3: hsl(@syntax-hue, 10%, 40%);
+
+// Editor styles (background, gutter, guides)
+
+atom-text-editor, // <- remove when Shadow DOM can't be disabled
+:host {
+  background-color: @old-syntax-bg;
+  color: @old-syntax-fg;
+
+  .line.cursor-line {
+    background-color: @syntax-cursor-line;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-left: 2px solid @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .bracket-matcher .region {
+    border-bottom: 1px solid @syntax-cursor-color;
+    box-sizing: border-box;
+    background-color: @syntax-bracket-matcher-background-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+
+    .line-number {
+      color: @syntax-gutter-text-color;
+      -webkit-font-smoothing: antialiased;
+      opacity: 1;
+
+      &.git-line-removed:before {
+        bottom: -3px;
+      }
+      &.git-line-removed:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 25px;
+        border-bottom: 1px dotted fade(@syntax-color-removed, 50%);
+        pointer-events: none;
+      }
+
+      &.cursor-line {
+        color: @syntax-gutter-text-color-selected;
+        background-color: @syntax-gutter-background-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        background-color: transparent;
+      }
+
+      .icon-right {
+        color: @syntax-text-color;
+      }
+
+      .icon-right {
+        color: @syntax-text-color;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @syntax-gutter-text-color-selected;
+  }
+}

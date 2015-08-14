@@ -1,0 +1,99 @@
+.source.css {
+
+  .variable {
+    &.other {
+      color: @purple;
+    }
+  }
+
+  .keyword {
+    &.important {
+      color: @mono-1;
+    }
+
+    &.control {
+      color: @orange;
+    }
+
+    &.operator {
+      color: @mono-1;
+    }
+
+    &.unit {
+      color: @mono-1;
+    }
+  }
+
+  // highlight properties/values if they are supported
+  .property-name {
+    color: @blue-light;
+  }
+
+  .property-value {
+    color: @mono-2;
+    &.support {
+      color: @mono-1;
+    }
+  }
+
+  .attribute-selector {
+    .punctuation {
+      color: @orange;
+    }
+  }
+
+  .meta {
+    color: @mono-1;
+
+    .attribute-selector,
+    .attribute-value {
+      color: @orange;
+    }
+
+    .property-name {
+      color: @blue-light;
+    }
+  }
+
+  .entity {
+    &.name {
+
+      &.tag {
+        color: @orange;
+      }
+    }
+
+    &.other {
+      &.attribute-name {
+        &.id {
+          color: @orange;
+        }
+      }
+    }
+
+    &.other.attribute-name {
+      color: @orange;
+    }
+  }
+
+
+  .constant {
+    color: @mono-1;
+
+    .unit {
+      color: inherit;
+    }
+  }
+
+  .at-rule {
+
+    .control {
+      color: @blue;
+    }
+
+    .constant,
+    .operator {
+      color: @mono-1;
+    }
+  }
+}

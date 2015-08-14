@@ -1,0 +1,16 @@
+{
+  "name": "visual-studio-dark-syntax",
+  "theme": "syntax",
+  "version": "1.1.0",
+  "description": "A dark syntax theme based on Visual Studio Dark",
+  "keywords": [
+    "dark",
+    "blue",
+    "syntax"
+  ],
+  "repository": "https://github.com/atom/one-dark-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
