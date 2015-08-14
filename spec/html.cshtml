@@ -1,0 +1,15 @@
+@model List<Person>
+
+@{
+    ViewBag.Title = "Razor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Razor</h1>
+<ul class="people">
+@foreach(Person person in Model) {
+    <li>
+        @person.Name &gt; (@Html.ActionLink("edit", "Edit", new { id = 1 }))
+    </li>
+}
+</ul>

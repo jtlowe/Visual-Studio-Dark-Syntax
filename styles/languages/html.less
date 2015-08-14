@@ -1,6 +1,9 @@
 .html {
+  color: @mono-1;
 
   &.tag {
+    color: #b4b4b4;
+
     &.punctuation {
       color: @mono-3;
     }
@@ -15,11 +18,26 @@
   }
 
   .string {
-    color: @mono-1;
+    color: #c8c8c8;
 
     .punctuation {
-      color: @mono-1;
+      color: #c8c8c8;
     }
   }
 
+
+}
+
+.source.html {
+  .entity {
+    &.name.tag.html {
+      color: @blue;
+    }
+
+    &.other {
+      &.attribute-name.html {
+        color: @blue-light;
+      }
+    }
+  }
 }
