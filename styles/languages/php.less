@@ -1,0 +1,61 @@
+.php {
+
+  .variable {
+    color: @blue-light;
+  }
+
+
+  .string {
+    color: @red;
+
+    .variable {
+      color: inherit;
+    }
+  }
+
+  .keyword {
+    &.operator {
+      color: @mono-1;
+    }
+  }
+
+  .class {
+    &.support {
+      color: @cyan;
+    }
+  }
+
+  .function {
+
+    .entity.name {
+      color: @cyan;
+    }
+
+    &.construct {
+      color: @blue;
+    }
+  }
+
+  .punctuation {
+    &.expression {
+      color: @mono-1;
+    }
+
+    &.string {
+      color: @red;
+    }
+
+    &.scope {
+      color: @mono-1;
+    }
+
+    &.embedded {
+      color: @red-bright;
+    }
+  }
+
+}
+
+// .php.punctuation.section.embedded {
+//   color: red;
+// }

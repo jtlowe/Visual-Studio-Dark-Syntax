@@ -1,0 +1,52 @@
+.source.gfm {
+  .markup {
+    color: @mono-1;
+    -webkit-font-smoothing: auto;
+
+    &.heading {
+      color: @blue;
+    }
+
+    &.link {
+      color: @hue-3;
+    }
+  }
+
+  .punctuation {
+    &.separator.key-value {
+        color: @mono-1;
+    }
+  }
+
+  .link {
+    .punctuation {
+      color: @red;
+    }
+
+    .entity {
+      color: @red;
+    }
+
+    .underline {
+      color: @red;
+      text-decoration: underline;
+    }
+  }
+
+  .comment{
+    color: @green;
+
+    .support {
+      color: @green;
+    }
+  }
+
+  .hr {
+    color: @blue;
+  }
+
+  .support {
+    color: @blue;
+  }
+
+}
